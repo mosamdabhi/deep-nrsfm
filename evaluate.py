@@ -58,7 +58,11 @@ def evaluate_reconstruction(predictions, params, error_dir, result_dir):
         points3d_gt = pred["ground_truth"]
         points3d, camera = calibrate_by_procrustes(
             pred["point3d"], pred["camera"], points3d_gt)
-        points2d = points3d.dot(camera)
+
+        # Commenting below for hands
+        # points2d = points3d.dot(camera)
+
+        points2d = pred["point3d"].dot(pred["camera"])
 
         # Evaluates error metrics
         metrics["error_2d"].append(np.linalg.norm(
