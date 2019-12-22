@@ -13,7 +13,7 @@ nice -n 10 python3 train.py \
 --model_dir=$root \
 --save_checkpoints_steps=1000 \
 --keep_checkpoint_max=0 \
---max_steps=200000 \
+--max_steps=800000 \
 --subject=$subject \
 --buffer_size=1000 \
 --throttle_secs=60 \

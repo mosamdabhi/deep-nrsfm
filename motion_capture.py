@@ -110,7 +110,7 @@ def get_trace3d(points3d, point_color=None, line_color=None, name="PointCloud"):
 
 def get_figure3d(points3d, gt=None, range_scale=1):
     """Yields plotly fig for visualization"""
-    traces = get_trace3d(points3d, BLUE, BLUE, "prediction")
+    traces = get_trace3d(points3d, BLUE, BLUE, "")
     if gt is not None:
         traces += get_trace3d(gt, RED, RED, "groundtruth")
     layout = go.Layout(

@@ -1,5 +1,5 @@
 subject=23
-step=184000
+step=784000
 root="../datasets/$subject"
 output="../datasets/results/"
 
